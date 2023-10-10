@@ -91,7 +91,7 @@ header {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1700px;
     margin: 0 auto;
     background-color:transparent; /* White content background */
     padding: 20px;
@@ -204,14 +204,89 @@ main {
     color: white;
 }
 
-ul {
+/* transaction history table */
+#transactionHistory{
+    border: 2px solid #5A8A8C;
+    background: #ECF3EC;
+    height: 300px;
+    width:auto;
+    flex-shrink: 0;
+    border-radius: 0px 20px 20px 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.histHeaders{
+    position: relative;
+    height: 58px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #5A8A8C;
+    color: white;
+    background-color: #5A8A8C;
+    border-radius: 0px 15px 0px 0px;
+    top: 0px;
+}
+
+#date1{
+    position:absolute;
+    top: 3px;
+    left: 10px;
+}
+#description1{
+    position:absolute;
+    top: 3px;
+    left: 120px;
+}
+#transfer1{
+    position:absolute;
+    top: 3px;
+    left: 450px;
+}
+#receive1{
+    position:absolute;
+    top: 3px;
+    left: 700px;
+}
+
+#spend1{
+    position:absolute;
+    top: 3px;
+    left: 900px;
+}
+
+#balance1{
+    position:absolute;
+    top: 3px;
+    left: 1100px;
+}
+
+table{
+    border-collapse: collapse;
+    position:absolute;
+    
+}
+
+td {
+    border: 2px solid #5A8A8C;
+    width: 1303px;
+    height: 58px;
+    flex-shrink: 0;
+  }
+
+#histBalance{
+    border-radius: 20px;
+}
+
+/* ul {
     list-style: none;
     padding: 0;
 }
 
 li {
     margin-bottom: 5px;
-}
+} */
 
 footer {
     text-align: center;
