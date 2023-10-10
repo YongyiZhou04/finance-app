@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Green-Blue background color */
-    color: white;
+    color: black ;
 }
 
 header {
@@ -109,16 +109,99 @@ main {
 }
 
 #addTransaction {
+    position: relative;
+    width: 111.963px;
+    height: 45.803px;
     background-color: #00796b;
-    color: white;
+    color: black; 
     padding: 10px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
+    background: #E0ECDE;
     cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+#addTransaction svg{
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+#addTransaction p{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
 }
 
 #addTransaction:hover {
-    background-color: #005a4f; /* Darker Green-Blue on hover */
+    background-color: #99c49e; /* Darker Green-Blue on hover */
+    color: white;
+}
+
+#remove {
+    position: relative;
+    width: 144.534px;
+    height: 45.803px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #FAF1EC;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+#remove svg{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+#remove p{
+    position: absolute;
+    top: 1px;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+}
+
+#remove:hover {
+    background-color: #e9c8c0; 
+    color: white;
+}
+
+#edit{
+    position: relative;
+    width: 111.963px;
+    height: 45.803px;
+    border-radius: 20px;
+    border:none;
+    background: #B5CCE9;
+    cursor: pointer;
+    
+}
+
+#edit svg{
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+#edit p{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+}
+
+
+#edit:hover {
+    background-color: rgb(152, 170, 209);
+    color: white;
 }
 
 ul {
