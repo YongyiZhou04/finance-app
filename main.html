@@ -20,7 +20,7 @@
               </svg>
             <div class="balance">
                 <h2>Asset:</h2>
-                <p id="balanceAmount">$</p>
+                <p id="balanceAmount">$ 0</p>
             </div>
             <!-- home button -->
             <svg id ="home" xmlns="http://www.w3.org/2000/svg" width="49" height="45" viewBox="0 0 49 45" fill="none">
@@ -63,14 +63,17 @@
 
             <label for="description">Description:</label>
             <input type="text" id="description" placeholder="Description">
-            
+
             <!-- make it so that the transfer has a pop thing so that you can choose which category it is
             or you can type the category and then click on the one you want -->
             <label for="transfer">Transfer:</label>
-            <input type="text" id="category" placeholder="Transfer">
+            <input type="text" id="category" placeholder="Transfer"> 
 
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="Amount">
+            <label for="amountReceive">Receive:</label>
+            <input type="number" id="amountReceive" placeholder="Receive">
+
+            <label for="amountSpend">Spend:</label>
+            <input type="number" id="amountSpend" placeholder="Spend">
 
             <button id = "edit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28" fill="none">
@@ -85,6 +88,8 @@
                   </svg>
                 <p>Remove</p>
             </button>
+
+            <!-- later make it so that by using enter the button is triggered as well for valid inputs -->
             <button id="addTransaction">
                 <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5364 0.160614C11.2878 0.160614 9.46499 1.98343 9.46499 4.23199V9.32124H4.37607C2.12751 9.32124 0.304687 11.1441 0.304688 13.3926C0.304688 15.6412 2.12751 17.464 4.37607 17.464H9.46499V22.5532C9.46499 24.8018 11.2878 26.6246 13.5364 26.6246C15.7849 26.6246 17.6077 24.8018 17.6077 22.5532V17.464H22.6973C24.9458 17.464 26.7687 15.6412 26.7687 13.3926C26.7687 11.1441 24.9458 9.32124 22.6973 9.32124H17.6077V4.23199C17.6077 1.98343 15.7849 0.160614 13.5364 0.160614Z" fill="#5A8A8C"/>

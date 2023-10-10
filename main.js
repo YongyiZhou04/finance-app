@@ -1,7 +1,7 @@
 // Add your JavaScript code here
 document.getElementById("addTransaction").addEventListener("click", () => {
     const description = document.getElementById("description").value;
-    const amount = parseFloat(document.getElementById("amount").value);
+    const amount = parseFloat(document.getElementById("amountReceive").value);
 
     if (description && !isNaN(amount)) {
         addTransaction(description, amount);
@@ -24,5 +24,5 @@ function addTransaction(description, amount) {
 
 function clearInputFields() {
     document.getElementById("description").value = "";
-    document.getElementById("amount").value = "";
+    document.getElementById("amountReceive").value = "";
 }
