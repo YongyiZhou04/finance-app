@@ -1,14 +1,73 @@
-*{
-    padding:0;
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    box-sizing: border-box;
-    color:aliceblue ;
-    text-align: center;
+    padding: 0;
+    background-color: #009688; /* Green-Blue background color */
+    color: white;
 }
 
-/* create container and text elements */
-.container{
+header {
+    background-color: #00796b; /* Darker Green-Blue header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White content background */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 150, 136, 0.2); /* Light Green-Blue section background */
+    border-radius: 5px;
+}
+
+#balanceAmount {
+    font-size: 24px;
+}
+
+#transaction input[type="text"],
+#transaction input[type="number"] {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(0, 39, 71), #1c003f);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00796b;
+    border-radius: 3px;
+}
+
+#addTransaction {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#addTransaction:hover {
+    background-color: #005a4f; /* Darker Green-Blue on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #00796b; /* Darker Green-Blue footer */
+    color: white;
 }

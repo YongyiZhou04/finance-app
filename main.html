@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="device-width, initial-scale=1.0">
-        
-        <title>BIG MONEY</title>
-        <link rel="stylesheet" href="main.css" type="text/css" media="only screen">
-        
-    </head>
-    <body>
-        
-        <div class="container">
-            <h1>hello</h1>
-        </div>        
-    
-    <script src = "./main.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbook</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>My Checkbook</h1>
+    </header>
+    <main>
+        <section id="balance">
+            <h2>Account Balance</h2>
+            <p id="balanceAmount">$1000.00</p>
+        </section>
+        <section id="transaction">
+            <h2>Transaction Details</h2>
+            <label for="description">Description:</label>
+            <input type="text" id="description" placeholder="Description">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Amount">
+            <button id="addTransaction">Add Transaction</button>
+        </section>
+        <section id="transactionHistory">
+            <h2>Transaction History</h2>
+            <ul id="transactionList">
+                <!-- Transaction history will be populated here using JavaScript -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Checkbook</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
 </html>
