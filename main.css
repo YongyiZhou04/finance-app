@@ -1,38 +1,103 @@
 /* Add your CSS styles here */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #009688; /* Green-Blue background color */
+    background-color: #ffffff; /* Green-Blue background color */
     color: white;
 }
 
 header {
-    background-color: #00796b; /* Darker Green-Blue header */
-    color: white;
+    height: 50px;
+    flex-shrink: 0;
+    background: #306974;
+    padding: 40px;
+}
+
+.contain{
+    align-items: center;
+    justify-self: center;
+    min-width: 500px;
+    flex: 0;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+
+/* profile info */
+.profile{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    background:#FAF1EC;
+    position: absolute;
+    right: 10px;
+    top: 0px
+}
+
+.profile svg{
+    margin-top: 10px;
+}
+
+#menu{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#home{
+    position: absolute;
+    right: 80px;
+    top: 3px
+}
+
+/* Asset on header */
+.balance {
+    position: absolute;
+    width: 250px;
+    height: 39.022px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #E0ECDE;
+    right: 150px;
+    top: 10px;
+}
+
+.balance h2{
+    flex-shrink: 0;
+    color: #5A8A8C;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 10px;
+    line-height: normal;
+}
+
+#balanceAmount {
+    color: #5A8A8C;
+    font-family: Inter;
+    margin-left: 85px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top:-37px;
 }
 
 main {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #ffffff; /* White content background */
+    background-color:transparent; /* White content background */
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: rgba(0, 150, 136, 0.2); /* Light Green-Blue section background */
-    border-radius: 5px;
-}
-
-#balanceAmount {
-    font-size: 24px;
-}
 
 #transaction input[type="text"],
 #transaction input[type="number"] {
@@ -68,6 +133,6 @@ li {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #00796b; /* Darker Green-Blue footer */
+    background: #306974;
     color: white;
 }
