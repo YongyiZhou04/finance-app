@@ -9,10 +9,13 @@ body {
 
 header {
     height: 40px;
-    min-width: 650px;
+    min-width: 680px;
     flex-shrink: 0;
     background: #306974;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .contain{
@@ -27,8 +30,8 @@ header {
 
 /* profile info */
 .profile{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     flex-shrink: 0;
     border-radius: 50%;
     font-size: 50px;
@@ -37,30 +40,34 @@ header {
     background:#FAF1EC;
     position: absolute;
     right: 10px;
-    top: 0px
+    top: 3px
 }
 
 .profile svg{
-    margin-top: 10px;
+    top: 60%;
+    width: 45px;
 }
 
 #menu{
     position: absolute;
     left: 10px;
     top: 10px;
+    width: 50px;
 }
 
 #home{
     position: absolute;
     right: 80px;
-    top: 3px
+    top: 3px;
+    width: 45px;
+    flex-shrink: 0;
 }
 
 /* Asset on header */
 .balance {
     position: absolute;
-    width: 250px;
-    height: 39.022px;
+    width: 210px;
+    height: 33px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #E0ECDE;
@@ -76,7 +83,7 @@ header {
     font-style: normal;
     font-weight: 700;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 7px;
     line-height: normal;
 }
 
@@ -93,12 +100,74 @@ header {
 
 main {
     max-width: 1500px;
+    min-height: 800px;
     margin: 0 auto;
     background-color:transparent; /* White content background */
     padding: 20px;
     border-radius: 5px;
 }
 
+.tab{
+    min-width: 650px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tab button {
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: 16px;
+    width: 15%;
+}
+
+#bank{
+    margin-right: -5px;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #6AA7AA;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+#salary{
+    margin-right: -5px;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+#life{
+    margin-right: -5px;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+
+#others{
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
 /* transaction history table */
 /* #transactionHistory{
     background: #ECF3EC;
@@ -124,6 +193,8 @@ main {
     background-color: #5A8A8C;
     border-radius: 0px 15px 0px 0px;
     top: 0px;
+    margin-left: 5%;
+    margin-right: 5%
 }
 
 #date1{
@@ -168,14 +239,18 @@ main {
 #transactionList{
     border-collapse: collapse;
     min-width: 650px;
+    color: #1C3738;
+    margin-left: 5%;
+    margin-right: 5%
 }
 
 td {
     border: 2px solid #5A8A8C;
     background: #ECF3EC;
     width: 1303px;
-    height: 35px;
+    height: 37px;
     flex-shrink: 0;
+    
 }
 
 #histBalance{
@@ -234,7 +309,7 @@ footer {
     background: #306974;
     color: white;
     height: 40px;
-    min-width: 650px;
+    min-width: 680px;
     flex-shrink: 0;
     background: #306974;
     padding: 20px;
