@@ -193,14 +193,13 @@
 
 #in{
     margin-top: 14px;
-    background-color: #5A8A8C;
     min-width: 650px;
     border-collapse: collapse;
 }
 
 .date2, .des, .cate, .rec, .spend2, .bal{
     border: none;
-    background: #CCE0DC;
+    background: transparent;
 }
 
 .date2{
