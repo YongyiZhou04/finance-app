@@ -192,18 +192,20 @@
 }
 
 #in{
+    margin-top: 14px;
     background-color: #5A8A8C;
     min-width: 650px;
     border-collapse: collapse;
 }
 
 .date2, .des, .cate, .rec, .spend2, .bal{
-    border-right: 2px solid #5A8A8C;
+    border: none;
     background: #CCE0DC;
 }
 
 .date2{
     width: 14%;
+    border-right: 2px solid #5A8A8C;
     padding-right:10px;
     text-align: right;
 }
