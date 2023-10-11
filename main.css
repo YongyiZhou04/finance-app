@@ -99,6 +99,69 @@ main {
     border-radius: 5px;
 }
 
+.tab{
+    min-width: 650px;
+}
+
+.tab button {
+    font-family: "Inter",sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+
+#bank{
+    margin-right: -5px;
+    width: 20%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #6AA7AA;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+#salary{
+    margin-right: -5px;
+    width: 20%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+#life{
+    margin-right: -5px;
+    width: 20%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
+
+#others{
+    width: 20%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #5A8A8C;
+    background: #8EBBBD;
+    font-family: "Inter",sans-serif;
+    color: white;
+}
 /* transaction history table */
 /* #transactionHistory{
     background: #ECF3EC;
@@ -174,7 +237,7 @@ td {
     border: 2px solid #5A8A8C;
     background: #ECF3EC;
     width: 1303px;
-    height: 35px;
+    height: 37px;
     flex-shrink: 0;
 }
 
