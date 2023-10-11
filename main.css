@@ -100,9 +100,9 @@ main {
 }
 
 /* transaction history table */
-#transactionHistory{
+/* #transactionHistory{
     background: #ECF3EC;
-    height: 160px;
+    height: 100px;
     min-width: 600px;
     margin-left: 5%;
     margin-right: 5%;
@@ -111,7 +111,7 @@ main {
     position: relative;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .histHeaders{
     position: relative;
@@ -166,7 +166,6 @@ main {
 
 table{
     border-collapse: collapse;
-    position:absolute;
 }
 
 td {
@@ -197,18 +196,33 @@ li {
 
 .cell1{
     width: 14%;
+    padding-right:10px;
+    text-align: right;
 }
 .cell2{
     width: 30%;
+    padding-left:10px;
+    text-align: left;
 }
 .cell3{
     width: 18%;
+    padding-right:10px;
+    text-align: right;
 }
 .cell4{
     width: 13%;
+    padding-right:10px;
+    text-align: right;
 }
 .cell5{
     width: 13%;
+    padding-right:10px;
+    text-align: right;
+}
+
+.cell6{
+    padding-right:10px;
+    text-align: right;
 }
 
 
