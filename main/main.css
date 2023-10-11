@@ -12,7 +12,10 @@ header {
     min-width: 680px;
     flex-shrink: 0;
     background: #306974;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .contain{
@@ -27,8 +30,8 @@ header {
 
 /* profile info */
 .profile{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     flex-shrink: 0;
     border-radius: 50%;
     font-size: 50px;
@@ -37,30 +40,34 @@ header {
     background:#FAF1EC;
     position: absolute;
     right: 10px;
-    top: 0px
+    top: 3px
 }
 
 .profile svg{
-    margin-top: 10px;
+    top: 60%;
+    width: 45px;
 }
 
 #menu{
     position: absolute;
     left: 10px;
     top: 10px;
+    width: 50px;
 }
 
 #home{
     position: absolute;
     right: 80px;
-    top: 3px
+    top: 3px;
+    width: 45px;
+    flex-shrink: 0;
 }
 
 /* Asset on header */
 .balance {
     position: absolute;
-    width: 250px;
-    height: 39.022px;
+    width: 210px;
+    height: 33px;
     flex-shrink: 0;
     border-radius: 20px;
     background: #E0ECDE;
@@ -76,7 +83,7 @@ header {
     font-style: normal;
     font-weight: 700;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 7px;
     line-height: normal;
 }
 
@@ -102,8 +109,8 @@ main {
 
 .tab{
     min-width: 650px;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .tab button {
@@ -186,8 +193,8 @@ main {
     background-color: #5A8A8C;
     border-radius: 0px 15px 0px 0px;
     top: 0px;
-    margin-left: 3%;
-    margin-right: 3%
+    margin-left: 5%;
+    margin-right: 5%
 }
 
 #date1{
@@ -233,8 +240,8 @@ main {
     border-collapse: collapse;
     min-width: 650px;
     color: #1C3738;
-    margin-left: 3%;
-    margin-right: 3%
+    margin-left: 5%;
+    margin-right: 5%
 }
 
 td {
