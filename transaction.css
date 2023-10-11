@@ -21,9 +21,8 @@
     border-radius: 3px;
     background-color: transparent;
     font-family: "Inter", sans-serif;
-    font-size: 13px;
-    color: #1C3738;
-    line-height: normal;
+    font-size: 13.5px;
+    color:#1C3738;
     opacity: 0.9;
     
 
@@ -87,6 +86,15 @@
     height: 50px;
 }
 
+.line{
+    position:absolute;
+    width:50%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #5A8A8C;
+    top: 50%;
+}
+
 #addTransaction {
     position: absolute;
     width: 111.963px;
@@ -100,6 +108,8 @@
     cursor: pointer;
     font-family: "Inter", sans-serif;
     right:0px;
+    font-style: italic;
+
 }
 
 #addTransaction svg{
@@ -129,10 +139,12 @@
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #FAF1EC;
+    background: #f4dcd1;
     cursor: pointer;
     font-family: "Inter", sans-serif;
     right:125px;
+    font-style: italic;
+
 }
 
 #remove svg{
@@ -150,7 +162,7 @@
 }
 
 #remove:hover {
-    background-color: #e9c8c0; 
+    background-color: #d9b2a8; 
     color: white;
 }
 
@@ -163,6 +175,7 @@
     background: #C7D6E9;
     cursor: pointer;
     right:285px;
+    font-style: italic;
 }
 
 #edit svg{
