@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Load the AJAX API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Reference the external JavaScript file -->
+    <script type="text/javascript" src="../plot/plot.js"></script>
 </head>
 <body>
     <header>
@@ -45,7 +50,7 @@
     <main>
         <!-- Tabs for different accounts -->
         <div class="tab">
-            <button class="tablinks" id="bank">Bank Account</button>
+            <button class="tablinks" id="bank"><h2>Bank Account</h2></button>
             <button class="tablinks" id = "salary">Salary</button>
             <button class="tablinks" id = "life">Life Stuff</button>
             <button class="tablinks" id = "others">Others</button>
@@ -137,26 +142,13 @@
                 </button>
             </div>
         </section>
-
-<<<<<<< HEAD:main.html
-        
-        <section id="transactionPlots">
-            <div class="plotContainer">
-                <>
-            </div>
-        </section>>   
-=======
-        <section class = "accSummary">
-            <h2>Account Summary</h2>
-            <!-- insert graphs here -->
+        <section id="transactionPlot">
+            <div id="chart_div"></div>
         </section>
->>>>>>> 09dcd214cb9dd9351b3eb2eee80e42985f467cae:main/main.html
-    </main>
 
     <footer>
         <p>&copy; 2023 Big Money Finance App</p>
     </footer>
     <script src="main.js"></script>
-    <script src="../graphs-summary/graphs.js"></script>
 </body>
 </html>
