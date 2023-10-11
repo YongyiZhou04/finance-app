@@ -8,10 +8,11 @@ body {
 }
 
 header {
-    height: 50px;
+    height: 40px;
+    min-width: 650px;
     flex-shrink: 0;
     background: #306974;
-    padding: 40px;
+    padding: 20px;
 }
 
 .contain{
@@ -20,7 +21,7 @@ header {
     min-width: 500px;
     flex: 0;
     left: 0px;
-    top: 0px;
+    top: -5px;
     position: relative;
 }
 
@@ -91,127 +92,22 @@ header {
 }
 
 main {
-    max-width: 1700px;
+    max-width: 1500px;
     margin: 0 auto;
     background-color:transparent; /* White content background */
     padding: 20px;
     border-radius: 5px;
 }
 
-
-#transaction input[type="text"],
-#transaction input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #00796b;
-    border-radius: 3px;
-}
-
-#addTransaction {
-    position: relative;
-    width: 111.963px;
-    height: 45.803px;
-    background-color: #00796b;
-    color: black; 
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background: #E0ECDE;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-}
-
-#addTransaction svg{
-    position: absolute;
-    top: 8px;
-    left: 25px;
-}
-
-#addTransaction p{
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-}
-
-#addTransaction:hover {
-    background-color: #99c49e; /* Darker Green-Blue on hover */
-    color: white;
-}
-
-#remove {
-    position: relative;
-    width: 144.534px;
-    height: 45.803px;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background: #FAF1EC;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-}
-
-#remove svg{
-    position: absolute;
-    top: 5px;
-    left: 20px;
-}
-
-#remove p{
-    position: absolute;
-    top: 1px;
-    right: 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-}
-
-#remove:hover {
-    background-color: #e9c8c0; 
-    color: white;
-}
-
-#edit{
-    position: relative;
-    width: 111.963px;
-    height: 45.803px;
-    border-radius: 20px;
-    border:none;
-    background: #C7D6E9;
-    cursor: pointer;
-    
-}
-
-#edit svg{
-    position: absolute;
-    top: 8px;
-    left: 25px;
-}
-
-#edit p{
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 20;
-}
-
-
-#edit:hover {
-    background-color: rgb(152, 170, 209);
-    color: white;
-}
-
 /* transaction history table */
 #transactionHistory{
-    border: 2px solid #5A8A8C;
     background: #ECF3EC;
-    height: 300px;
-    width:auto;
+    height: 160px;
+    min-width: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
     flex-shrink: 0;
-    border-radius: 0px 20px 20px 20px;
+    border-radius: 0px 20px 0px 0px;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -219,7 +115,7 @@ main {
 
 .histHeaders{
     position: relative;
-    height: 58px;
+    height: 50px;
     flex-shrink: 0;
     stroke-width: 2px;
     stroke: #5A8A8C;
@@ -233,47 +129,53 @@ main {
     position:absolute;
     top: 3px;
     left: 10px;
+    font-size: 16px;
 }
 #description1{
     position:absolute;
     top: 3px;
-    left: 120px;
+    left: 15%;
+    font-size: 16px;
 }
 #transfer1{
     position:absolute;
     top: 3px;
-    left: 450px;
+    left: 45%;
+    font-size: 16px;
 }
 #receive1{
     position:absolute;
     top: 3px;
-    left: 700px;
+    left: 63%;
+    font-size: 16px;
 }
 
 #spend1{
     position:absolute;
     top: 3px;
-    left: 900px;
+    left: 76%;
+    font-size: 16px;
 }
 
 #balance1{
     position:absolute;
     top: 3px;
-    left: 1100px;
+    left: 89%;
+    font-size: 16px;
 }
 
 table{
     border-collapse: collapse;
     position:absolute;
-    
 }
 
 td {
     border: 2px solid #5A8A8C;
+    background: #ECF3EC;
     width: 1303px;
-    height: 58px;
+    height: 35px;
     flex-shrink: 0;
-  }
+}
 
 #histBalance{
     border-radius: 20px;
@@ -288,9 +190,50 @@ li {
     margin-bottom: 5px;
 } */
 
+#c7,#c8,#c9,#c10,#c11,#c12{
+    border: 2px solid #5A8A8C;
+    background: #CCE0DC;
+}
+
+.cell1{
+    width: 14%;
+}
+.cell2{
+    width: 30%;
+}
+.cell3{
+    width: 18%;
+}
+.cell4{
+    width: 13%;
+}
+.cell5{
+    width: 13%;
+}
+
+
 footer {
     text-align: center;
     padding: 10px;
     background: #306974;
     color: white;
+    height: 40px;
+    min-width: 650px;
+    flex-shrink: 0;
+    background: #306974;
+    padding: 20px;
 }
+
+
+::-webkit-scrollbar{
+    width: 15px;
+    
+  }
+  ::-webkit-scrollbar-track{
+    background: rgb(247, 236, 218);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(60, 140, 143), #509c76);
+    border-radius: 10px;
+  }
+  

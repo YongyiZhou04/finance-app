@@ -1,0 +1,192 @@
+.container{
+    border-radius: 20px;
+    border: 2px solid #5A8A8C;
+    background: #AFDBD2;
+    height: 40px;
+    min-width: 600px;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-shrink: 0;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#transaction input[type="text"],
+#transaction input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #1C3738;
+    line-height: normal;
+    opacity: 0.9;
+    
+
+}
+
+#date{
+    position:absolute;
+    border:none;
+    left:0%;
+    width: 12%;
+    text-align: right;
+    border-right: 2px solid #5A8A8C;
+}
+#description{
+    position:absolute;
+    border:none;
+    left:15%;
+    width: 27%;
+    text-align: left;
+    border-right: 2px solid #5A8A8C;
+}
+
+#category{
+    position:absolute;
+    border:none;
+    left:45%;
+    width: 15%;
+    text-align: right;
+    border-right: 2px solid #5A8A8C;
+}
+
+#amountReceive{
+    position:absolute;
+    border:none;
+    left:63%;
+    width: 10%;
+    text-align: right;
+    border-right: 2px solid #5A8A8C;
+}
+
+#amountSpend{
+    position:absolute;
+    border:none;
+    left: 76%;
+    width: 10%;
+    text-align: right;
+    border-right: 2px solid #5A8A8C;
+    
+}
+#balance{
+    position:absolute;
+    border:none;
+    left: 89%;
+    width: 10%;
+    text-align: right;
+}
+
+.icons{
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    min-width: 600px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-shrink: 0;
+    height: 100px;
+}
+
+#addTransaction {
+    position: absolute;
+    width: 111.963px;
+    height: 45.803px;
+    background-color: #00796b;
+    color: black; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #E0ECDE;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    right:0px;
+}
+
+#addTransaction svg{
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+#addTransaction p{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+}
+
+#addTransaction:hover {
+    background-color: #99c49e; /* Darker Green-Blue on hover */
+    color: white;
+}
+
+#remove {
+    position: absolute;
+    width: 144.534px;
+    height: 45.803px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #FAF1EC;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    right:125px;
+}
+
+#remove svg{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+#remove p{
+    position: absolute;
+    top: 1px;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+}
+
+#remove:hover {
+    background-color: #e9c8c0; 
+    color: white;
+}
+
+#edit{
+    position: absolute;
+    width: 111.963px;
+    height: 45.803px;
+    border-radius: 20px;
+    border:none;
+    background: #C7D6E9;
+    cursor: pointer;
+    right:285px;
+}
+
+#edit svg{
+    position: absolute;
+    top: 8px;
+    left: 25px;
+}
+
+#edit p{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 20;
+}
+
+
+#edit:hover {
+    background-color: rgb(152, 170, 209);
+    color: white;
+}
