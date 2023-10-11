@@ -9,7 +9,7 @@ body {
 
 header {
     height: 40px;
-    min-width: 650px;
+    min-width: 680px;
     flex-shrink: 0;
     background: #306974;
     padding: 20px;
@@ -93,6 +93,7 @@ header {
 
 main {
     max-width: 1500px;
+    min-height: 800px;
     margin: 0 auto;
     background-color:transparent; /* White content background */
     padding: 20px;
@@ -101,6 +102,8 @@ main {
 
 .tab{
     min-width: 650px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .tab button {
@@ -183,6 +186,8 @@ main {
     background-color: #5A8A8C;
     border-radius: 0px 15px 0px 0px;
     top: 0px;
+    margin-left: 3%;
+    margin-right: 3%
 }
 
 #date1{
@@ -228,6 +233,8 @@ main {
     border-collapse: collapse;
     min-width: 650px;
     color: #1C3738;
+    margin-left: 3%;
+    margin-right: 3%
 }
 
 td {
@@ -236,6 +243,7 @@ td {
     width: 1303px;
     height: 37px;
     flex-shrink: 0;
+    
 }
 
 #histBalance{
@@ -294,7 +302,7 @@ footer {
     background: #306974;
     color: white;
     height: 40px;
-    min-width: 650px;
+    min-width: 680px;
     flex-shrink: 0;
     background: #306974;
     padding: 20px;

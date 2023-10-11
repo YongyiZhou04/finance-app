@@ -4,9 +4,9 @@
     background: #AFDBD2;
     height: 40px;
     margin-top: 20px;
-    min-width: 650px;
-    /* margin-left: 5%;
-    margin-right: 5%; */
+    min-width: 647px;
+    margin-left: 3%;
+    margin-right: 3%;
     flex-shrink: 0;
     border-radius: 0px 0px 20px 20px;
     position: relative;
@@ -31,6 +31,7 @@
 #date{
     border:none;
     left:0%;
+    min-width: 67px;
     width: 80%;
     height:10px;
     text-align: right;
@@ -84,6 +85,8 @@
     min-width: 650px;
     margin-top: 10px;
     height: 50px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .line{
