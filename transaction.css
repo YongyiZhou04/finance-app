@@ -4,7 +4,7 @@
     background: #AFDBD2;
     height: 40px;
     margin-top: 20px;
-    min-width: 450px;
+    min-width: 650px;
     /* margin-left: 5%;
     margin-right: 5%; */
     flex-shrink: 0;
@@ -30,13 +30,13 @@
 }
 
 #date{
-    position:absolute;
     border:none;
     left:0%;
-    width: 12%;
+    width: 90%;
+    height:10px;
     text-align: right;
-    border-right: 2px solid #5A8A8C;
 }
+
 #description{
     position:absolute;
     border:none;
@@ -191,16 +191,44 @@
     color: white;
 }
 
-/* #in{
+#in{
     background-color: #5A8A8C;
-    width:100px;
-    height: 100px;
+    min-width: 650px;
+    border-collapse: collapse;
 }
 
-#date2{
-    background: black;
-    width: 100px;
-    height:100px;
-    align-content: center;
-    border: #00796b;
-} */
+.date2, .des, .cate, .rec, .spend2, .bal{
+    border-right: 2px solid #5A8A8C;
+    background: #CCE0DC;
+}
+
+.date2{
+    width: 14%;
+    padding-right:10px;
+    text-align: right;
+}
+.des{
+    width: 30%;
+    padding-left:10px;
+    text-align: left;
+}
+.cate{
+    width: 18%;
+    padding-right:10px;
+    text-align: right;
+}
+.rec{
+    width: 13%;
+    padding-right:10px;
+    text-align: right;
+}
+.spend2{
+    width: 13%;
+    padding-right:10px;
+    text-align: right;
+}
+
+.bal{
+    padding-right:10px;
+    text-align: right;
+}

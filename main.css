@@ -117,7 +117,7 @@ main {
     position: relative;
     height: 50px;
     flex-shrink: 0;
-    min-width: 450px;
+    min-width: 650px;
     stroke-width: 2px;
     stroke: #5A8A8C;
     color: white;
@@ -165,9 +165,9 @@ main {
     font-size: 16px;
 }
 
-table{
+#transactionList{
     border-collapse: collapse;
-    min-width: 450px;
+    min-width: 650px;
 }
 
 td {
