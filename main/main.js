@@ -5,7 +5,6 @@ document.getElementById("addTransaction").addEventListener("click", () => {
     const transfer = document.getElementById("category").value;
     const receive = parseFloat(document.getElementById("amountReceive").value);
     const spend = parseFloat(document.getElementById("amountSpend").value);
-    const balanceInput = parseFloat(document.getElementById("balance").value);
 
     // Check if required fields are filled
     if (date && description && transfer && (!isNaN(receive) || !isNaN(spend)) ) {
@@ -28,7 +27,6 @@ document.getElementById("addTransaction").addEventListener("click", () => {
             receiveCell.textContent = receive;
         }
         else{
-            
             receiveCell.textContent = 0;
         }
 
@@ -37,7 +35,6 @@ document.getElementById("addTransaction").addEventListener("click", () => {
             spendCell.textContent = spend;
         }
         else{
-            
             spendCell.textContent = 0;
         }
         
@@ -54,7 +51,7 @@ document.getElementById("addTransaction").addEventListener("click", () => {
         // Clear the input fields
         clearInputFields();
     } else {
-        alert("Please fill in all required fields with valid values.");
+        alert("Please fill in all required fields with valid values. Required fields include Date, Description, Transfer, and either receive or spend.");
     }
 });
 

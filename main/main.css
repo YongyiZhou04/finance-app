@@ -189,14 +189,14 @@ main {
 /* Styling the Tables */
 .histHeaders{
     position: relative;
-    height: 50px;
+    height: 55px;
     flex-shrink: 0;
     min-width: 650px;
     stroke-width: 2px;
     stroke: #5A8A8C;
     color: white;
     background-color: #5A8A8C;
-    border-radius: 0px 15px 0px 0px;
+    border-radius: 0px 10px 0px 0px;
     top: 0px;
     margin-left: 5%;
     margin-right: 5%
@@ -204,41 +204,41 @@ main {
 
 #date1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 10px;
-    font-size: 16px;
+    font-size: 17px;
 }
 #description1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 15%;
-    font-size: 16px;
+    font-size: 17px;
 }
 #transfer1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 45%;
-    font-size: 16px;
+    font-size: 17px;
 }
 #receive1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 63%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #spend1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 76%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #balance1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 89%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #transactionList{
@@ -246,7 +246,9 @@ main {
     min-width: 650px;
     color: #1C3738;
     margin-left: 5%;
-    margin-right: 5%
+    margin-right: 5%;
+    margin-top: -45px;
+    
 }
 
 td {
