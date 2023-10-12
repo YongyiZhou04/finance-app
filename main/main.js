@@ -10,43 +10,53 @@ document.getElementById("addTransaction").addEventListener("click", () => {
     if (date && description && transfer && (!isNaN(receive) || !isNaN(spend)) ) {
         // Create a new row in the table
         const transactionList = document.getElementById("transactionList");
-        const newRow = transactionList.insertRow(-1);
+        const newRow = transactionList.insertRow(-1); 
 
         // Add data to the new row
         const dateCell = newRow.insertCell(0);
         dateCell.textContent = date;
+        if (transactionList.rows.length % 2 === 1) {
+            dateCell.style.backgroundColor = "#CCE0DC";}
 
         const descriptionCell = newRow.insertCell(1);
         descriptionCell.textContent = description;
+        if (transactionList.rows.length % 2 === 1) {
+            descriptionCell.style.backgroundColor = "#CCE0DC";}
 
         const transferCell = newRow.insertCell(2);
         transferCell.textContent = transfer;
+        if (transactionList.rows.length % 2 === 1) {
+            transferCell.style.backgroundColor = "#CCE0DC";}
 
         const receiveCell = newRow.insertCell(3);
+        var newRec = 0.0;
         if(!(isNaN(receive))){
-            receiveCell.textContent = receive;
+            newRec = receive;
         }
-        else{
-            receiveCell.textContent = 0;
-        }
+        receiveCell.textContent = newRec.toFixed(2);
+        if (transactionList.rows.length % 2 === 1) {
+            receiveCell.style.backgroundColor = "#CCE0DC";}
 
+        var newSpend = 0.0;
         const spendCell = newRow.insertCell(4);
         if(!(isNaN(spend))){
-            spendCell.textContent = spend;
+            newSpend = spend;
         }
-        else{
-            spendCell.textContent = 0;
-        }
+        spendCell.textContent = newSpend.toFixed(2);
+        if (transactionList.rows.length % 2 === 1) {
+            spendCell.style.backgroundColor = "#CCE0DC";}
         
 
         // Calculate and update the new balance
         const balanceAmount = document.getElementById("balanceAmount");
         const currentBalance = parseFloat(balanceAmount.textContent.replace("$", ""));
-        const newBalance = currentBalance + receive - spend;
+        const newBalance = currentBalance + newRec - newSpend;
         balanceAmount.textContent = `$${newBalance.toFixed(2)}`;
 
         const balanceCell = newRow.insertCell(5);
-        balanceCell.textContent = newBalance;
+        balanceCell.textContent = newBalance.toFixed(2);
+        if (transactionList.rows.length % 2 === 1) {
+            balanceCell.style.backgroundColor = "#CCE0DC";}
 
         // Clear the input fields
         clearInputFields();
@@ -63,3 +73,6 @@ function clearInputFields() {
     document.getElementById("amountSpend").value = "";
     document.getElementById("balance").value = "";
 }
+
+
+// https://codepen.io/demartini/pen/EJvgPa

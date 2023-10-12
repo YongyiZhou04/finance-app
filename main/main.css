@@ -248,7 +248,6 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: -45px;
-    
 }
 
 td {
@@ -257,12 +256,13 @@ td {
     width: 1303px;
     height: 37px;
     flex-shrink: 0;
-    
+    padding-left: 10px;
 }
 
 #histBalance{
     border-radius: 20px;
 }
+
 
 
 .cell1{
@@ -322,5 +322,14 @@ td {
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: "Inter", sans-serif;
+}
 
+/* Even row background color */
+.evenRow{
+    background-color: #ECF3EC;
+}
+
+/* Odd row background color */
+.OddRow {
+    background-color: #CCE0DC;
 }
