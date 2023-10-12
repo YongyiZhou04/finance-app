@@ -1,4 +1,5 @@
-/* Add your CSS styles here */
+/* Main styling for the main screen */
+
 body {
     font-family: "Inter", sans-serif;
     margin: 0;
@@ -98,35 +99,41 @@ header {
     margin-top:-37px;
 }
 
+/* main body */
 main {
     max-width: 1500px;
-    min-height: 800px;
+    min-height: 600px;
     margin: 0 auto;
-    background-color:transparent; /* White content background */
+    background-color:transparent; 
     padding: 20px;
     border-radius: 5px;
 }
 
+/* categories */
 .tab{
     min-width: 650px;
     margin-left: 5%;
     margin-right: 5%;
+    height: 35px;
 }
 
 .tab button {
+    width: 15%;
+}
+
+.tab h2{
     font-family: "Inter",sans-serif;
     color: white;
-    font-size: 16px;
-    width: 15%;
+    font-size: 18px;
+    margin-top: 6px;
 }
 
 #bank{
     margin-right: -5px;
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #6AA7AA;
     font-family: "Inter",sans-serif;
@@ -136,9 +143,8 @@ main {
     margin-right: -5px;
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -148,9 +154,8 @@ main {
     margin-right: -5px;
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -160,9 +165,8 @@ main {
 #others{
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -182,6 +186,7 @@ main {
     justify-content: center;
 } */
 
+/* Styling the Tables */
 .histHeaders{
     position: relative;
     height: 50px;
@@ -303,18 +308,7 @@ li {
 }
 
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #306974;
-    color: white;
-    height: 40px;
-    min-width: 680px;
-    flex-shrink: 0;
-    background: #306974;
-    padding: 20px;
-}
-
+/* Scroll Bar */
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -328,3 +322,16 @@ footer {
     border-radius: 10px;
   }
   
+  footer {
+    text-align: center;
+    background: #306974;
+    color: white;
+    height: 50px;
+    min-width: 680px;
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Inter", sans-serif;
+
+}
