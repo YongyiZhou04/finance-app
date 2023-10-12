@@ -11,7 +11,7 @@ document.getElementById("addTransaction").addEventListener("click", () => {
 
 function addTransaction(description, amount) {
     const transactionList = document.getElementById("transactionList");
-    const listItem = document.createElement("li");
+    const listItem = document.createElement("tr");
     listItem.textContent = `${description}: $${amount.toFixed(2)}`;
     transactionList.appendChild(listItem);
 
