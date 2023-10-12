@@ -262,24 +262,11 @@ td {
     border-radius: 20px;
 }
 
-/* ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 5px;
-} */
-
-#c7,#c8,#c9,#c10,#c11,#c12{
-    border: 2px solid #5A8A8C;
-    background: #CCE0DC;
-}
 
 .cell1{
     width: 14%;
     padding-right:10px;
-    text-align: right;
+    text-align: right; 
 }
 .cell2{
     width: 30%;
