@@ -51,9 +51,9 @@
         <!-- Tabs for different accounts -->
         <div class="tab">
             <button class="tablinks" id="bank"><h2>Bank Account</h2></button>
-            <button class="tablinks" id = "salary">Salary</button>
-            <button class="tablinks" id = "life">Life Stuff</button>
-            <button class="tablinks" id = "others">Others</button>
+            <button class="tablinks" id = "salary"><h2>Salary</h2></button>
+            <button class="tablinks" id = "life"><h2>Life Stuff</h2></button>
+            <button class="tablinks" id = "others"><h2>Other</h2></button>
           </div> 
         <!-- https://www.w3schools.com/howto/howto_js_tabs.asp-->
 
@@ -76,15 +76,6 @@
                         <td class="cell5" id="c5"></td>
                         <td class="cell6" id="c6">100</td>
                     </tr>
-                    <tr>
-                        <td class="cell1" id="c7">10/23/2023</td>
-                        <td class="cell2" id="c8">Groceries</td>
-                        <td class="cell3" id="c9">Dining</td>
-                        <td class="cell4" id="c10"></td>
-                        <td class="cell5" id="c11">50</td>
-                        <td class="cell6" id="c12">50</td>
-                    </tr>
-                    
                 </tbody>
             </table>
 
@@ -110,7 +101,7 @@
                         <td class="spend2">
                             <input type="number" id="amountSpend" placeholder="Spend"></td>
                         <td class="bal">
-                            <input type="number" id="balance" placeholder="Balance">
+                            <!-- <input type="number" id="balance" placeholder="Balance"> -->
                         </td>
                     </tr>
                 </table>
@@ -145,10 +136,11 @@
         <section id="transactionPlot">
             <div id="chart_div"></div>
         </section>
-
+    </main>
     <footer>
         <p>&copy; 2023 Big Money Finance App</p>
     </footer>
+
     <script src="main.js"></script>
 </body>
 </html>

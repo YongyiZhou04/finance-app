@@ -1,4 +1,5 @@
-/* Add your CSS styles here */
+/* Main styling for the main screen */
+
 body {
     font-family: "Inter", sans-serif;
     margin: 0;
@@ -98,35 +99,41 @@ header {
     margin-top:-37px;
 }
 
+/* main body */
 main {
     max-width: 1500px;
-    min-height: 800px;
+    min-height: 600px;
     margin: 0 auto;
-    background-color:transparent; /* White content background */
+    background-color:transparent; 
     padding: 20px;
     border-radius: 5px;
 }
 
+/* categories */
 .tab{
     min-width: 650px;
     margin-left: 5%;
     margin-right: 5%;
+    height: 35px;
 }
 
 .tab button {
+    width: 15%;
+}
+
+.tab h2{
     font-family: "Inter",sans-serif;
     color: white;
-    font-size: 16px;
-    width: 15%;
+    font-size: 18px;
+    margin-top: 6px;
 }
 
 #bank{
     margin-right: -5px;
     max-width: 250px;
-    min-width: 160px;
-    height: 35px;
+    min-width: 150px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #6AA7AA;
     
@@ -143,9 +150,8 @@ main {
     margin-right: -5px;
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -155,9 +161,8 @@ main {
     margin-right: -5px;
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -167,9 +172,8 @@ main {
 #others{
     max-width: 250px;
     min-width: 150px;
-    height: 30px;
     flex-shrink: 0;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #8EBBBD;
     font-family: "Inter",sans-serif;
@@ -189,16 +193,17 @@ main {
     justify-content: center;
 } */
 
+/* Styling the Tables */
 .histHeaders{
     position: relative;
-    height: 50px;
+    height: 55px;
     flex-shrink: 0;
     min-width: 650px;
     stroke-width: 2px;
     stroke: #5A8A8C;
     color: white;
     background-color: #5A8A8C;
-    border-radius: 0px 15px 0px 0px;
+    border-radius: 0px 10px 0px 0px;
     top: 0px;
     margin-left: 5%;
     margin-right: 5%
@@ -206,41 +211,41 @@ main {
 
 #date1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 10px;
-    font-size: 16px;
+    font-size: 17px;
 }
 #description1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 15%;
-    font-size: 16px;
+    font-size: 17px;
 }
 #transfer1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 45%;
-    font-size: 16px;
+    font-size: 17px;
 }
 #receive1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 63%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #spend1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 76%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #balance1{
     position:absolute;
-    top: 3px;
+    top: 4px;
     left: 89%;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #transactionList{
@@ -248,7 +253,8 @@ main {
     min-width: 650px;
     color: #1C3738;
     margin-left: 5%;
-    margin-right: 5%
+    margin-right: 5%;
+    margin-top: -45px;
 }
 
 td {
@@ -257,31 +263,19 @@ td {
     width: 1303px;
     height: 37px;
     flex-shrink: 0;
-    
+    padding-left: 10px;
 }
 
 #histBalance{
     border-radius: 20px;
 }
 
-/* ul {
-    list-style: none;
-    padding: 0;
-}
 
-li {
-    margin-bottom: 5px;
-} */
-
-#c7,#c8,#c9,#c10,#c11,#c12{
-    border: 2px solid #5A8A8C;
-    background: #CCE0DC;
-}
 
 .cell1{
     width: 14%;
     padding-right:10px;
-    text-align: right;
+    text-align: right; 
 }
 .cell2{
     width: 30%;
@@ -310,18 +304,7 @@ li {
 }
 
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #306974;
-    color: white;
-    height: 40px;
-    min-width: 680px;
-    flex-shrink: 0;
-    background: #306974;
-    padding: 20px;
-}
-
+/* Scroll Bar */
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -335,3 +318,25 @@ footer {
     border-radius: 10px;
   }
   
+  footer {
+    text-align: center;
+    background: #306974;
+    color: white;
+    height: 50px;
+    min-width: 680px;
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Even row background color */
+.evenRow{
+    background-color: #ECF3EC;
+}
+
+/* Odd row background color */
+.OddRow {
+    background-color: #CCE0DC;
+}

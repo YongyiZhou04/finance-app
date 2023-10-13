@@ -1,3 +1,4 @@
+/* styling for the transaction page */
 .container{
     border-radius: 20px;
     border: 2px solid #5A8A8C;
@@ -14,6 +15,7 @@
     justify-content: center;
 }
 
+/* transaction input blocks */
 #transaction input[type="text"],
 #transaction input[type="number"] {
     padding: 10px;
@@ -24,8 +26,6 @@
     font-size: 13.5px;
     color:#1C3738;
     opacity: 0.9;
-    
-
 }
 
 #date{
@@ -77,6 +77,7 @@
     text-align: right;
 }
 
+/* edit, remove, and add icon */
 .icons{
     position:relative;
     align-items: center;
@@ -212,6 +213,7 @@
     color: white;
 }
 
+/* table styling for the inputs to be placed */
 #in{
     min-width: 650px;
     border-collapse: collapse;
@@ -254,7 +256,7 @@
     text-align: right;
 }
 
-.bal{
+/* .bal{
     padding-right:10px;
     text-align: right;
-}
+} */
