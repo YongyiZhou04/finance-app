@@ -123,15 +123,22 @@ main {
 #bank{
     margin-right: -5px;
     max-width: 250px;
-    min-width: 150px;
-    height: 30px;
+    min-width: 160px;
+    height: 35px;
     flex-shrink: 0;
     border-radius: 15px 15px 0px 0px;
     border: 1px solid #5A8A8C;
     background: #6AA7AA;
+    
+}
+
+#bank h2{
     font-family: "Inter",sans-serif;
     color: white;
+    font-size: 13px;
+    top: 0px;
 }
+
 #salary{
     margin-right: -5px;
     max-width: 250px;

@@ -4,9 +4,9 @@
     background: #AFDBD2;
     height: 40px;
     margin-top: 20px;
-    min-width: 650px;
-    /* margin-left: 5%;
-    margin-right: 5%; */
+    min-width: 647px;
+    margin-left: 5%;
+    margin-right: 5%;
     flex-shrink: 0;
     border-radius: 0px 0px 20px 20px;
     position: relative;
@@ -21,9 +21,8 @@
     border-radius: 3px;
     background-color: transparent;
     font-family: "Inter", sans-serif;
-    font-size: 13px;
-    color: #1C3738;
-    line-height: normal;
+    font-size: 13.5px;
+    color:#1C3738;
     opacity: 0.9;
     
 
@@ -32,52 +31,49 @@
 #date{
     border:none;
     left:0%;
-    width: 90%;
+    min-width: 67px;
+    width: 80%;
     height:10px;
     text-align: right;
 }
 
 #description{
-    position:absolute;
     border:none;
     left:15%;
-    width: 27%;
+    width: 90%;
     text-align: left;
-    border-right: 2px solid #5A8A8C;
+    height:10px;
 }
 
 #category{
-    position:absolute;
     border:none;
     left:45%;
-    width: 15%;
+    width: 90%;
+    height: 10px;
     text-align: right;
-    border-right: 2px solid #5A8A8C;
 }
 
 #amountReceive{
-    position:absolute;
     border:none;
     left:63%;
-    width: 10%;
+    width: 90%;
+    height:10px;
     text-align: right;
-    border-right: 2px solid #5A8A8C;
 }
 
 #amountSpend{
-    position:absolute;
     border:none;
     left: 76%;
-    width: 10%;
+    width: 90%;
+    height:10px;
     text-align: right;
-    border-right: 2px solid #5A8A8C;
     
 }
 #balance{
-    position:absolute;
     border:none;
     left: 89%;
-    width: 10%;
+    width: 90%;
+    height:10px;
     text-align: right;
 }
 
@@ -85,12 +81,32 @@
     position:relative;
     align-items: center;
     justify-content: center;
-    min-width: 600px;
+    flex-shrink: 0;
+    min-width: 650px;
     margin-top: 10px;
+    height: 50px;
     margin-left: 5%;
     margin-right: 5%;
-    flex-shrink: 0;
-    height: 100px;
+}
+
+.line{
+    position:absolute;
+    width:35%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #5A8A8C;
+    top: 50%;
+    left: 0px;
+}
+
+.line2{
+    position:absolute;
+    width:30%;
+    height: 2px;
+    border-radius: 20px;
+    background-color: #5A8A8C;
+    top: 50%;
+    right: 450px;
 }
 
 #addTransaction {
@@ -106,6 +122,8 @@
     cursor: pointer;
     font-family: "Inter", sans-serif;
     right:0px;
+    font-style: italic;
+
 }
 
 #addTransaction svg{
@@ -135,10 +153,12 @@
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: #FAF1EC;
+    background: #f4dcd1;
     cursor: pointer;
     font-family: "Inter", sans-serif;
     right:125px;
+    font-style: italic;
+
 }
 
 #remove svg{
@@ -156,7 +176,7 @@
 }
 
 #remove:hover {
-    background-color: #e9c8c0; 
+    background-color: #d9b2a8; 
     color: white;
 }
 
@@ -169,6 +189,7 @@
     background: #C7D6E9;
     cursor: pointer;
     right:285px;
+    font-style: italic;
 }
 
 #edit svg{
@@ -192,15 +213,14 @@
 }
 
 #in{
-    margin-top: 14px;
-    background-color: #5A8A8C;
     min-width: 650px;
     border-collapse: collapse;
+    top:0;
 }
 
 .date2, .des, .cate, .rec, .spend2, .bal{
     border: none;
-    background: #CCE0DC;
+    background: transparent;
 }
 
 .date2{
@@ -211,21 +231,25 @@
 }
 .des{
     width: 30%;
+    border-right: 2px solid #5A8A8C;
     padding-left:10px;
     text-align: left;
 }
 .cate{
     width: 18%;
+    border-right: 2px solid #5A8A8C;
     padding-right:10px;
     text-align: right;
 }
 .rec{
     width: 13%;
+    border-right: 2px solid #5A8A8C;
     padding-right:10px;
     text-align: right;
 }
 .spend2{
     width: 13%;
+    border-right: 2px solid #5A8A8C;
     padding-right:10px;
     text-align: right;
 }
