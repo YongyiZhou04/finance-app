@@ -139,12 +139,6 @@ main {
     
 }
 
-#bank h2{
-    font-family: "Inter",sans-serif;
-    color: white;
-    font-size: 13px;
-    top: 0px;
-}
 
 #salary{
     margin-right: -5px;
@@ -323,7 +317,7 @@ td {
     background: #306974;
     color: white;
     height: 50px;
-    min-width: 680px;
+    min-width: 720px;
     width: 100%;
     flex-shrink: 0;
     padding-top: 20px;
