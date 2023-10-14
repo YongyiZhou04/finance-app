@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbook</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="../transactions/transaction.css">
     <link rel="stylesheet" href="../plot/plots.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
@@ -132,43 +134,13 @@
             </div>
         </section>
         <div class="plots">
-            <canvas id="myChart"></canvas>
+            <div class="chart-container1">
+                <canvas id="lineChart" width="200" height = "150"></canvas>
+            </div>
+            <div class ="chart-container2">
+                <canvas id="pieChart" width="200" height = "150"></canvas>
+            </div>
         </div>
-        <script>
-            const data = {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'My First Dataset',
-                    data: [65, 59, 80, 81, 56, 55, 40],
-                    fill: false,
-                    borderColor: 'rgb(75, 192, 192)',
-                    tension: 0.1
-                }]
-            };
-        
-            const config = {
-                type: 'line',
-                data: data,
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Big Money Line Chart'
-                        }
-                    }
-                },
-            };
-        
-            // Get the canvas element
-            const canvas = document.getElementById('myChart');
-        
-            // Create a new chart on the canvas
-            const myChart = new Chart(canvas, config);
-        </script>
     </main>
 
     
@@ -176,7 +148,7 @@
         <p>&copy; 2023 Big Money Finance App</p>
     </footer>
     
+    <script src="../plot/charts.js"></script>
     <script src="main.js"></script>
-    <script src="../plot/plot.js"></script>
 </body>
 </html>/plot
