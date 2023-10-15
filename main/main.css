@@ -115,10 +115,14 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     height: 35px;
+    
 }
 
 .tab button {
     width: 15%;
+    cursor: pointer;
+    background-color: #8EBBBD;
+    transition: background-color 0.3s;
 }
 
 .tab h2{
@@ -135,10 +139,7 @@ main {
     flex-shrink: 0;
     border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
-    background: #6AA7AA;
-    
 }
-
 
 #salary{
     margin-right: -5px;
@@ -147,7 +148,6 @@ main {
     flex-shrink: 0;
     border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
-    background: #8EBBBD;
     font-family: "Inter",sans-serif;
     color: white;
 }
@@ -158,7 +158,6 @@ main {
     flex-shrink: 0;
     border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
-    background: #8EBBBD;
     font-family: "Inter",sans-serif;
     color: white;
 }
@@ -169,7 +168,6 @@ main {
     flex-shrink: 0;
     border-radius: 18px 18px 0px 0px;
     border: 1px solid #5A8A8C;
-    background: #8EBBBD;
     font-family: "Inter",sans-serif;
     color: white;
 }

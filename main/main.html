@@ -55,7 +55,7 @@
             <button class="tablinks" id="bank"><h2>Bank Account</h2></button>
             <button class="tablinks" id = "salary"><h2>Salary</h2></button>
             <button class="tablinks" id = "life"><h2>Life Stuff</h2></button>
-            <button class="tablinks" id = "others"><h2>Other</h2></button>
+            <button class="tablinks" id = "others"><h2>Others</h2></button>
           </div> 
         <!-- https://www.w3schools.com/howto/howto_js_tabs.asp-->
 
@@ -69,7 +69,43 @@
                 <h1 id="spend1">Spend</h1>
                 <h1 id="balance1">Balance</h1>
             </div>
-            <table id="transactionListBank">
+            <table class="transactionList" id="transactionListBank">
+                <tbody>
+                    <tr>
+                        <td class="cell1">10/20/2023</td>
+                        <td class="cell2">Starting Balance</td>
+                        <td class="cell3">misc</td>
+                        <td class="cell4">100</td>
+                        <td class="cell5"></td>
+                        <td class="cell6">100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="transactionList"  id="transactionListSalary">
+                <tbody>
+                    <tr>
+                        <td class="cell1">10/20/2023</td>
+                        <td class="cell2">Starting Balance</td>
+                        <td class="cell3">misc</td>
+                        <td class="cell4">100</td>
+                        <td class="cell5"></td>
+                        <td class="cell6">100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="transactionList" id="transactionListLife">
+                <tbody>
+                    <tr>
+                        <td class="cell1">10/20/2023</td>
+                        <td class="cell2">Starting Balance</td>
+                        <td class="cell3">misc</td>
+                        <td class="cell4">100</td>
+                        <td class="cell5"></td>
+                        <td class="cell6">100</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="transactionList" id="transactionListOthers">
                 <tbody>
                     <tr>
                         <td class="cell1">10/20/2023</td>
@@ -88,16 +124,16 @@
                 <table id="in">
                     <tr >
                         <td class="date2">
-                            <input type="text" class="date" id="dateBank" placeholder="MM/DD/YYYY"></td>
+                            <input type="text" id="date" placeholder="MM/DD/YYYY"></td>
                         <td class="des"> 
-                            <input type="text" class="description" id="desBank" placeholder="Description"></td>
+                            <input type="text" id="description" placeholder="Description"></td>
                         <td class="cate"> 
-                            <input type="text" class="category" id="transferBank" placeholder="Transfer"> 
+                            <input type="text" id="category" placeholder="Transfer"> 
                         </td>
                         <td class="rec">
-                            <input type="number" class="amountReceive" id="receiveBank" placeholder="Receive"></td>
+                            <input type="number" id="amountReceive" placeholder="Receive"></td>
                         <td class="spend2">
-                            <input type="number" class="amountSpent" id="spendBank" placeholder="Spend"></td>
+                            <input type="number"  id="amountSpent" placeholder="Spend"></td>
                         <td class="bal">
                             <!-- <input type="number" id="balance" placeholder="Balance"> -->
                         </td>

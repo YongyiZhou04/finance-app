@@ -1,36 +1,86 @@
 // Store the currently selected account type
-let selectedAccountType = "Bank";
+let accountType = "Bank";
 
 //clicking through tabs
 document.getElementById("bank").addEventListener("click", () => {
-    selectedAccountType = "Bank";
+    accountType = "Bank";
+    switchTab(accountType);
 });
 
 document.getElementById("salary").addEventListener("click", () => {
-    selectedAccountType = "Salary";
+    accountType = "Salary";
+    switchTab(accountType);
 });
 
 document.getElementById("life").addEventListener("click", () => {
-    selectedAccountType = "Life";
+    accountType = "Life";
+    switchTab(accountType);
 });
 
 document.getElementById("others").addEventListener("click", () => {
-    selectedAccountType = "Others";
+    accountType = "Others";
+    switchTab(accountType);
 });
+
+switchTab(accountType);
+
+const tabButtons = document.querySelectorAll(".tablinks");
+
+tabButtons.forEach(tabButton => {
+    tabButton.addEventListener("mouseover", () => {
+        if (tabButton.id !== accountType.toLowerCase()) {
+            tabButton.style.backgroundColor = "#76a3a6";
+        }
+    });
+
+    tabButton.addEventListener("mouseout", () => {
+        if (tabButton.id !== accountType.toLowerCase()) {
+            tabButton.style.backgroundColor = "#8EBBBD"; // Or reset it to another value if needed
+        }
+    });
+});
+
+function switchTab(accountType) {
+    // Hide all tables
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+        if (table.id !== "in") {
+            table.style.display = 'none';
+        }
+    });
+
+    // Show the selected table
+    const selectedTable = document.getElementById(`transactionList${accountType}`);
+    if (selectedTable) {
+        selectedTable.style.display = 'table'; // Display the table
+    }
+
+    // Remove the "selected-tab" class from all tab buttons
+    const tabButtons = document.querySelectorAll(".tablinks");
+    tabButtons.forEach(button => {
+        button.style.backgroundColor = "#8EBBBD";
+    });
+
+    // Add the "selected-tab" class to the clicked tab button
+    document.getElementById(accountType.toLowerCase()).style.backgroundColor = "#6AA7AA";
+
+    
+}
+
 
 // Function to add a transaction
 function addTransaction() {
     // Get the input values
-    const date = document.getElementById(`date${selectedAccountType}`).value;
-    const description = document.getElementById(`des${selectedAccountType}`).value;
-    const transfer = document.getElementById(`transfer${selectedAccountType}`).value;
-    const receive = parseFloat(document.getElementById(`receive${selectedAccountType}`).value);
-    const spend = parseFloat(document.getElementById(`spend${selectedAccountType}`).value);
+    const date = document.getElementById("date").value;
+    const description = document.getElementById("description").value;
+    const transfer = document.getElementById("category").value;
+    const receive = parseFloat(document.getElementById("amountReceive").value);
+    const spend = parseFloat(document.getElementById("amountSpent").value);
 
     // Check if required fields are filled
     if (date && description && transfer && (!isNaN(receive) || !isNaN(spend))) {
         // Create a new row in the table
-        const transactionList = document.getElementById(`transactionList${selectedAccountType}`);
+        const transactionList = document.getElementById(`transactionList${accountType}`);
         const newRow = transactionList.insertRow(-1);
 
         // Add data to the new row
@@ -118,7 +168,7 @@ document.getElementById("amountReceive").addEventListener("keydown", (event) => 
         addTransaction();
     }
 });
-document.getElementById("amountSpend").addEventListener("keydown", (event) => {
+document.getElementById("amountSpent").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         addTransaction();
     }
@@ -130,6 +180,5 @@ function clearInputFields() {
     document.getElementById("description").value = "";
     document.getElementById("category").value = "";
     document.getElementById("amountReceive").value = "";
-    document.getElementById("amountSpend").value = "";
-    document.getElementById("balance").value = "";
+    document.getElementById("amountSpent").value = "";
 }

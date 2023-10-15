@@ -28,7 +28,7 @@
     opacity: 0.9;
 }
 
-.date{
+#date{
     border:none;
     left:0%;
     min-width: 67px;
@@ -37,7 +37,7 @@
     text-align: right;
 }
 
-.description{
+#description{
     border:none;
     left:15%;
     width: 90%;
@@ -45,7 +45,7 @@
     height:10px;
 }
 
-.category{
+#category{
     border:none;
     left:45%;
     width: 90%;
@@ -53,7 +53,7 @@
     text-align: right;
 }
 
-.amountReceive{
+#amountReceive{
     border:none;
     left:63%;
     width: 90%;
@@ -61,7 +61,7 @@
     text-align: right;
 }
 
-.amountSpent{
+#amountSpent{
     border:none;
     left: 76%;
     width: 90%;
@@ -124,7 +124,7 @@
     font-family: "Inter", sans-serif;
     right:0px;
     font-style: italic;
-
+    transition: background-color 0.3s;
 }
 
 #addTransaction svg{
@@ -139,6 +139,7 @@
     right: 30px;
     font-family: "Inter", sans-serif;
     font-size: 20;
+    transition: color 0.3s;
 }
 
 #addTransaction:hover {
@@ -159,7 +160,7 @@
     font-family: "Inter", sans-serif;
     right:125px;
     font-style: italic;
-
+    transition: background-color 0.3s;
 }
 
 #remove svg{
@@ -174,6 +175,7 @@
     right: 30px;
     font-family: "Inter", sans-serif;
     font-size: 20;
+    transition: color 0.3s;
 }
 
 #remove:hover {
@@ -191,6 +193,7 @@
     cursor: pointer;
     right:285px;
     font-style: italic;
+    transition: background-color 0.3s;
 }
 
 #edit svg{
@@ -205,6 +208,7 @@
     right: 30px;
     font-family: "Inter", sans-serif;
     font-size: 20;
+    transition: color 0.3s;
 }
 
 
