@@ -1,16 +1,36 @@
+// Store the currently selected account type
+let selectedAccountType = "Bank";
+
+//clicking through tabs
+document.getElementById("bank").addEventListener("click", () => {
+    selectedAccountType = "Bank";
+});
+
+document.getElementById("salary").addEventListener("click", () => {
+    selectedAccountType = "Salary";
+});
+
+document.getElementById("life").addEventListener("click", () => {
+    selectedAccountType = "Life";
+});
+
+document.getElementById("others").addEventListener("click", () => {
+    selectedAccountType = "Others";
+});
+
 // Function to add a transaction
 function addTransaction() {
     // Get the input values
-    const date = document.getElementById("date").value;
-    const description = document.getElementById("description").value;
-    const transfer = document.getElementById("category").value;
-    const receive = parseFloat(document.getElementById("amountReceive").value);
-    const spend = parseFloat(document.getElementById("amountSpend").value);
+    const date = document.getElementById(`date${selectedAccountType}`).value;
+    const description = document.getElementById(`des${selectedAccountType}`).value;
+    const transfer = document.getElementById(`transfer${selectedAccountType}`).value;
+    const receive = parseFloat(document.getElementById(`receive${selectedAccountType}`).value);
+    const spend = parseFloat(document.getElementById(`spend${selectedAccountType}`).value);
 
     // Check if required fields are filled
     if (date && description && transfer && (!isNaN(receive) || !isNaN(spend))) {
         // Create a new row in the table
-        const transactionList = document.getElementById("transactionList");
+        const transactionList = document.getElementById(`transactionList${selectedAccountType}`);
         const newRow = transactionList.insertRow(-1);
 
         // Add data to the new row
