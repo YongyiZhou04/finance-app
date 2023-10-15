@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="../transactions/transaction.css">
+    <link rel="stylesheet" href="../transactions/inputs.css">
+    <link rel="stylesheet" href="../transactions/history.css">
     <link rel="stylesheet" href="../plot/plots.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +19,9 @@
 
 </head>
 <body>
+    <!-- Styling for this  category is in main.css-->
     <header>
-        <div class="contain">
+        <div class="contain"> 
             <!-- menu icon -->
             <svg id ="menu" xmlns="http://www.w3.org/2000/svg" width="61" height="36" viewBox="0 0 61 36" fill="none">
                 <rect width="61" height="8.21053" rx="4.10526" fill="#FAF1EC"/>
@@ -48,7 +50,7 @@
 
 
     <main>
-        <!-- Tabs for different accounts -->
+        <!-- Tabs for different accounts; styling in main.css-->
         <div class="tab">
             <button class="tablinks" id="bank"><h2>Bank Account</h2></button>
             <button class="tablinks" id = "salary"><h2>Salary</h2></button>
@@ -57,6 +59,7 @@
           </div> 
         <!-- https://www.w3schools.com/howto/howto_js_tabs.asp-->
 
+        <!-- Styling in history.css -->
         <section id="transactionHistory">
             <div class="histHeaders">
                 <h1 id="date1">Date</h1>
@@ -79,7 +82,7 @@
                 </tbody>
             </table>
         </section>
-
+        <!-- Styling in inputs.css; functionality coded in main.js -->
         <section id="transaction">
             <div class="container">
                 <table id="in">
@@ -128,6 +131,8 @@
                 </button>
             </div>
         </section>
+
+        <!-- functionality in charts.js; styling in plots.css -->
         <div class="plots">
             <div class="chart-container1">
                 <canvas id="lineChart" width="200" height = "150"></canvas>
@@ -146,4 +151,4 @@
     <script src="../plot/charts.js"></script>
     <script src="main.js"></script>
 </body>
-</html>/plot
+</html>

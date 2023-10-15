@@ -1,0 +1,123 @@
+/* transaction history table */
+/* #transactionHistory{
+    background: #ECF3EC;
+    height: 100px;
+    min-width: 600px;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-shrink: 0;
+    border-radius: 0px 20px 0px 0px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Styling the Tables */
+.histHeaders{
+    position: relative;
+    height: 55px;
+    flex-shrink: 0;
+    min-width: 650px;
+    stroke-width: 2px;
+    stroke: #5A8A8C;
+    color: white;
+    background-color: #5A8A8C;
+    border-radius: 0px 10px 0px 0px;
+    top: 0px;
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+#date1{
+    position:absolute;
+    top: 4px;
+    left: 10px;
+    font-size: 17px;
+}
+#description1{
+    position:absolute;
+    top: 4px;
+    left: 15%;
+    font-size: 17px;
+}
+#transfer1{
+    position:absolute;
+    top: 4px;
+    left: 45%;
+    font-size: 17px;
+}
+#receive1{
+    position:absolute;
+    top: 4px;
+    left: 63%;
+    font-size: 17px;
+}
+
+#spend1{
+    position:absolute;
+    top: 4px;
+    left: 76%;
+    font-size: 17px;
+}
+
+#balance1{
+    position:absolute;
+    top: 4px;
+    left: 89%;
+    font-size: 17px;
+}
+
+#transactionList{
+    border-collapse: collapse;
+    min-width: 650px;
+    color: #1C3738;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -45px;
+}
+
+td {
+    border: 2px solid #5A8A8C;
+    background: #ECF3EC;
+    width: 1303px;
+    height: 37px;
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+
+#histBalance{
+    border-radius: 20px;
+}
+
+
+
+.cell1{
+    width: 14%;
+    padding-right:10px;
+    text-align: right; 
+}
+.cell2{
+    width: 30%;
+    padding-left:10px;
+    text-align: left;
+}
+.cell3{
+    width: 18%;
+    padding-right:10px;
+    text-align: right;
+}
+.cell4{
+    width: 13%;
+    padding-right:10px;
+    text-align: right;
+}
+.cell5{
+    width: 13%;
+    padding-right:10px;
+    text-align: right;
+}
+
+.cell6{
+    padding-right:10px;
+    text-align: right;
+}
