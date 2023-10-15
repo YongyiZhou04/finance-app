@@ -183,9 +183,9 @@
     color: white;
 }
 
-#edit{
+#export{
     position: absolute;
-    width: 111.963px;
+    width: 115px;
     height: 45.803px;
     border-radius: 20px;
     border:none;
@@ -196,23 +196,24 @@
     transition: background-color 0.3s;
 }
 
-#edit svg{
+#export svg{
     position: absolute;
-    top: 8px;
-    left: 25px;
+    top:10px;
+    left: 20px;
+    color: rgb(27, 27, 116);
 }
 
-#edit p{
+#export p{
     position: absolute;
     top: 0;
-    right: 30px;
+    right: 20px;
     font-family: "Inter", sans-serif;
     font-size: 20;
     transition: color 0.3s;
 }
 
 
-#edit:hover {
+#export:hover {
     background-color: rgb(152, 170, 209);
     color: white;
 }

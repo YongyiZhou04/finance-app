@@ -200,12 +200,6 @@ main {
     font-family: "Inter", sans-serif;
 }
 
-/* Even row background color */
-.evenRow{
-    background-color: #ECF3EC;
-}
-
-/* Odd row background color */
-.OddRow {
-    background-color: #CCE0DC;
+.selected{
+    background-color: red;
 }
