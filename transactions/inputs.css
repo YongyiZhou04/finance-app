@@ -28,7 +28,7 @@
     opacity: 0.9;
 }
 
-#date{
+.date{
     border:none;
     left:0%;
     min-width: 67px;
@@ -37,7 +37,7 @@
     text-align: right;
 }
 
-#description{
+.description{
     border:none;
     left:15%;
     width: 90%;
@@ -45,7 +45,7 @@
     height:10px;
 }
 
-#category{
+.category{
     border:none;
     left:45%;
     width: 90%;
@@ -53,7 +53,7 @@
     text-align: right;
 }
 
-#amountReceive{
+.amountReceive{
     border:none;
     left:63%;
     width: 90%;
@@ -61,7 +61,7 @@
     text-align: right;
 }
 
-#amountSpend{
+.amountSpent{
     border:none;
     left: 76%;
     width: 90%;
