@@ -51,9 +51,9 @@ function switchTab(accountType) {
 
     // Show the selected table
     const selectedTable = document.getElementById(`transactionList${accountType}`);
-    if (selectedTable) {
-        selectedTable.style.display = 'table'; // Display the table
-    }
+    
+    selectedTable.style.display = 'table'; // Display the table
+
 
     // Remove the "selected-tab" class from all tab buttons
     const tabButtons = document.querySelectorAll(".tablinks");
