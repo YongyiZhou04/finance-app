@@ -1,3 +1,10 @@
+const categoryBalances = {
+    "Bank": 0,
+    "Salary": 0,
+    "Life": 0,
+    "Others": 0,
+};
+
 // Store the currently selected account type
 let accountType = "Bank";
 
@@ -126,7 +133,8 @@ function addTransaction() {
         balanceAmount.textContent = `$${newBalance.toFixed(2)}`;
 
         const balanceCell = newRow.insertCell(5);
-        balanceCell.textContent = newBalance.toFixed(2);
+        categoryBalances[accountType] += newRec - newSpend;
+        balanceCell.textContent = categoryBalances[accountType].toFixed(2);
         if (transactionList.rows.length % 2 === 1) {
             balanceCell.style.backgroundColor = "#CCE0DC";
         }
