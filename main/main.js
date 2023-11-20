@@ -1,3 +1,6 @@
+import {updateChart} from '../plot/charts.js';
+
+
 const categoryBalances = {
     "Bank": 0,
     "Salary": 0,
@@ -139,6 +142,9 @@ function addTransaction() {
             balanceCell.style.backgroundColor = "#CCE0DC";
         }
 
+        //Update chart
+        updateChart(date, newBalance);
+
         // Clear the input fields
         clearInputFields();
 
@@ -148,6 +154,9 @@ function addTransaction() {
         alert("Please fill in all required fields with valid values. Required fields include Date, Description, Transfer, and either receive or spend.");
     }
 }
+
+
+
 
 // Event listener for clicking the "addTransaction" button
 document.getElementById("addTransaction").addEventListener("click", addTransaction);

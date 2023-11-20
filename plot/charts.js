@@ -1,8 +1,11 @@
+let spendings = [];
+let dates = [];
+
 const lineData = {
-  labels: ['Sept 1', 'Sept 7', 'Sept 15', 'Sept 22', 'Oct 1'],
+  labels: dates,
   datasets: [{
         label: 'My First Dataset',
-        data: [65, 59, 80, 81, 56],
+        data: spendings,
         fill: false,
         borderColor: '#1F6F73',
         tension: 0.1
@@ -84,9 +87,23 @@ const pieData = {
         }
     };
 
-    const pieCanvas = document.getElementById('pieChart');
+const pieCanvas = document.getElementById('pieChart');
 
-    // Create a new chart on the canvas
-    const pieChart = new Chart(pieCanvas, pieConfig);
+// Create a new chart on the canvas
+const pieChart = new Chart(pieCanvas, pieConfig);
 
-   
+function updateChart(date, balance){
+    dates.push(date.toString());
+    spendings.push(balance);
+    console.log(spendings);
+    console.log(dates);
+
+    // Update the chart data
+    lineChart.data.labels = dates.slice();
+    lineChart.data.datasets[0].data = spendings.slice();
+
+    // Update the chart
+    lineChart.update();
+}
+
+export {updateChart};
