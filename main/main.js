@@ -232,11 +232,11 @@ document.getElementById("remove").addEventListener("click", function () {
         for (const row of selectedRows) {
             row.remove();
         }
-
+        
         // Update the displayed balance amount
         const balanceAmount = document.getElementById("balanceAmount");
         balanceAmount.textContent = `$${totalBalance.toFixed(2)}`;
-
+        
         // Exit removal mode and reset the button
         removeMode = false;
         this.innerHTML = `
