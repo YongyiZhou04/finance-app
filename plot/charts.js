@@ -1,11 +1,10 @@
-let spendings = [];
+let balances = [];
 let dates = [];
 
 const lineData = {
   labels: dates,
   datasets: [{
-        label: 'My First Dataset',
-        data: spendings,
+        data: balances,
         fill: false,
         borderColor: '#1F6F73',
         tension: 0.1
@@ -18,10 +17,17 @@ const lineConfig = {
     options: {
         scales: {
             x: {
+                type: 'time',
+                time: {
+                    unit: 'day'
+                },
+                min: dates.sort()[dates.length-1],
+                max: dates.sort()[0],
                 display: true,
                 grid: {
                     display: false,
                 },
+                offsetAfterAutoskip: false,
             },
             y: {
                 display: true,
@@ -62,7 +68,6 @@ const pieData = {
         'Other'
         ],
         datasets: [{
-        label: 'My First Dataset',
         data: [300, 50, 100],
         backgroundColor: [
             '#525F6F',
@@ -93,14 +98,15 @@ const pieCanvas = document.getElementById('pieChart');
 const pieChart = new Chart(pieCanvas, pieConfig);
 
 function updateChart(date, balance){
-    dates.push(date.toString());
-    spendings.push(balance);
-    console.log(spendings);
-    console.log(dates);
+    let stringDate = date.toString();
+    dates.push(stringDate.substr(6,4).concat("-", stringDate.substr(0,2), "-", stringDate.substr(3,2)));
+    dates.sort();
+    console.log("min" + dates[dates.length-1].toString());
+    balances.push(balance);
 
     // Update the chart data
     lineChart.data.labels = dates.slice();
-    lineChart.data.datasets[0].data = spendings.slice();
+    lineChart.data.datasets[0].data = balances.slice();
 
     // Update the chart
     lineChart.update();

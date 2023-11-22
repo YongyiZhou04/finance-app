@@ -1,6 +1,6 @@
 import {updateChart} from '../plot/charts.js';
 
-
+let dateFormat = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/([12][0-9][0-9][0-9])$/;
 const categoryBalances = {
     "Bank": 0,
     "Salary": 0,
@@ -86,25 +86,50 @@ function addTransaction() {
 
     // Check if required fields are filled
     if (date && description && transfer && (!isNaN(receive) || !isNaN(spend))) {
-        // Create a new row in the table
-        const transactionList = document.getElementById(`transactionList${accountType}`);
-        const newRow = transactionList.insertRow(-1);
 
-        // Add data to the new row
+        if (!dateFormat.test(date)){
+            alert("Please insert valid date: MM/DD/YYYY");
+            return;
+        }
+
+        const transactionList = document.getElementById(`transactionList${accountType}`);
+
+        //Find the correct row index
+        let index = findSortedRowIndex(transactionList.rows, date);
+
+        // Create a new row in the table
+        const newRow = transactionList.insertRow(index);
+
+        // Map containing all new information later to be added to local storage
+        let newEntry = new Map();
+
+        // Add data to the new row if the format is correct
         const dateCell = newRow.insertCell(0);
         dateCell.textContent = date;
+
+        // Adding to the newEntry map
+        newEntry.set("date", date);
+
         if (transactionList.rows.length % 2 === 1) {
             dateCell.style.backgroundColor = "#CCE0DC";
         }
 
         const descriptionCell = newRow.insertCell(1);
         descriptionCell.textContent = description;
+
+        // Adding to the newEntry map
+        newEntry.set("description", description);
+
         if (transactionList.rows.length % 2 === 1) {
             descriptionCell.style.backgroundColor = "#CCE0DC";
         }
 
         const transferCell = newRow.insertCell(2);
         transferCell.textContent = transfer;
+
+        // Adding to the newEntry map
+        newEntry.set("transfer", transfer);
+
         if (transactionList.rows.length % 2 === 1) {
             transferCell.style.backgroundColor = "#CCE0DC";
         }
@@ -115,6 +140,10 @@ function addTransaction() {
             newRec = receive;
         }
         receiveCell.textContent = newRec.toFixed(2);
+
+        // Adding to the newEntry map
+        newEntry.set("receive", newRec.toFixed(2));
+
         if (transactionList.rows.length % 2 === 1) {
             receiveCell.style.backgroundColor = "#CCE0DC";
         }
@@ -125,6 +154,10 @@ function addTransaction() {
             newSpend = spend;
         }
         spendCell.textContent = newSpend.toFixed(2);
+
+        // Adding to the newEntry map
+        newEntry.set("spend", newSpend.toFixed(2));
+
         if (transactionList.rows.length % 2 === 1) {
             spendCell.style.backgroundColor = "#CCE0DC";
         }
@@ -134,6 +167,9 @@ function addTransaction() {
         const currentBalance = parseFloat(balanceAmount.textContent.replace("$", ""));
         const newBalance = currentBalance + newRec - newSpend;
         balanceAmount.textContent = `$${newBalance.toFixed(2)}`;
+
+        // Adding to the newEntry map
+        newEntry.set("balance", newBalance.toFixed(2));
 
         const balanceCell = newRow.insertCell(5);
         categoryBalances[accountType] += newRec - newSpend;
@@ -148,14 +184,15 @@ function addTransaction() {
         // Clear the input fields
         clearInputFields();
 
+        //Add newEntry to local storage
+        localStorage.setItem(newEntry.get("date"), newEntry)
+
         // // Sort the table by date after adding a new transaction
         // sortTableByDate();
     } else {
         alert("Please fill in all required fields with valid values. Required fields include Date, Description, Transfer, and either receive or spend.");
     }
 }
-
-
 
 
 // Event listener for clicking the "addTransaction" button
@@ -263,4 +300,20 @@ document.getElementById("remove").addEventListener("click", function () {
 const transactionLists = document.querySelectorAll(".transactionList");
 for (const transactionList of transactionLists) {
     transactionList.addEventListener("click", toggleRowSelection);
+}
+
+function findSortedRowIndex(rows, date){
+    let mid = Math.floor(rows.length / 2);
+    let left = 0;
+    let right = rows.length-1;
+    while ((0 < mid && mid < rows.length) && !(rows[mid - 1].cells[0].innerText < date && date <= rows[mid].cells[0].innerText)) {
+        if (date > rows[mid].cells[0].innerText) {
+            left = mid + 1;
+        } else {
+            right = mid;
+        }
+    
+        mid = Math.floor((right + left) / 2);
+    }
+    return mid;
 }
