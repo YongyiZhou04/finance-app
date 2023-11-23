@@ -300,7 +300,7 @@ function toggleButtonMode() {
                 <rect x="6.67188" y="12.231" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-45 6.67188 12.231)" fill="red"/>
                 <rect x="12.4297" y="30.9438" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-135 12.4297 30.9438)" fill="red"/>
             </svg>
-            <p>Delete</p>
+            <p>DELETE</p>
         `;
     }
 
