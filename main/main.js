@@ -102,7 +102,6 @@ function addTransaction() {
         }
 
         const transactionList = document.getElementById(`transactionList${accountType}`);
-        const transactionListDouble = document.getElementById(`transactionList${transfer}`)
 
         //Find the correct row index
         let index = findSortedRowIndex(transactionList.rows, date);
@@ -197,7 +196,7 @@ function addTransaction() {
         balanceCell.textContent = categoryBalances[accountType].toFixed(2);
         if (transactionList.rows.length % 2 === 1) {
             balanceCell.style.backgroundColor = "#CCE0DC";
-        }
+        }        
 
         //Update chart
         updateChart(date, newBalance);
