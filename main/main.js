@@ -106,6 +106,7 @@ function addTransaction() {
         // Add data to the new row if the format is correct
         const dateCell = newRow.insertCell(0);
         dateCell.textContent = date;
+        dateCell.classList.add("cell1");
 
         // Adding to the newEntry map
         newEntry.set("date", date);
@@ -116,6 +117,7 @@ function addTransaction() {
 
         const descriptionCell = newRow.insertCell(1);
         descriptionCell.textContent = description;
+        descriptionCell.classList.add("cell2");
 
         // Adding to the newEntry map
         newEntry.set("description", description);
@@ -126,6 +128,7 @@ function addTransaction() {
 
         const transferCell = newRow.insertCell(2);
         transferCell.textContent = transfer;
+        transferCell.classList.add("cell3");
 
         // Adding to the newEntry map
         newEntry.set("transfer", transfer);
@@ -140,6 +143,7 @@ function addTransaction() {
             newRec = receive;
         }
         receiveCell.textContent = newRec.toFixed(2);
+        receiveCell.classList.add("cell4");
 
         // Adding to the newEntry map
         newEntry.set("receive", newRec.toFixed(2));
@@ -154,6 +158,7 @@ function addTransaction() {
             newSpend = spend;
         }
         spendCell.textContent = newSpend.toFixed(2);
+        spendCell.classList.add("cell5");
 
         // Adding to the newEntry map
         newEntry.set("spend", newSpend.toFixed(2));
@@ -234,59 +239,63 @@ function clearInputFields() {
     document.getElementById("amountSpent").value = "";
 }
 
+// Function to recalculate the total balance based on the spend and receive cells of each row
+function recalculateTotalBalance() {
+    let totalBalance = 0;
+
+    // Select all rows with the class "cell4" (Receive) and "cell5" (Spend)
+    const receiveCells = document.querySelectorAll(".cell4");
+    const spendCells = document.querySelectorAll(".cell5");
+
+    // Iterate through each pair of receive and spend cells and update the total balance
+    receiveCells.forEach((receiveCell, index) => {
+        const receive = parseFloat(receiveCell.textContent) || 0; // Default to 0 if not a valid number
+        const spend = parseFloat(spendCells[index].textContent) || 0; // Default to 0 if not a valid number
+        totalBalance += receive - spend;
+    });
+
+    // Update the displayed total balance amount
+    const balanceAmount = document.getElementById("balanceAmount");
+    balanceAmount.textContent = `$${totalBalance.toFixed(2)}`;
+}
+
 // Variable to keep track of whether removal mode is active
 let removeMode = false;
 
-// Variable to keep track of the total balance
-let totalBalance = 0;
-
 // Function to handle row selection
 function toggleRowSelection(event) {
+    const row = event.target.parentElement;
+
     if (removeMode) {
-        // In removal mode
-        const row = event.target.parentElement;
-        if (row.classList.contains("selected")) {
-            row.classList.remove("selected");
-            // Update total balance when a row is deselected
-            const balanceCell = row.querySelector(".balance-cell");
-            const balance = parseFloat(balanceCell.textContent);
-            totalBalance += balance;
-        } else {
-            row.classList.add("selected");
-            // Update total balance when a row is selected
-            const balanceCell = row.querySelector(".balance-cell");
-            const balance = parseFloat(balanceCell.textContent);
-            totalBalance -= balance;
-        }
+        // In removal mode, remove the row
+        row.remove();
+    
+        // Deselect the row after removal
+        row.classList.remove("selected");
+    } else {
+        // Toggle row selection if not in removal mode
+        row.classList.toggle("selected");
     }
 }
 
-// Add a click event listener to the "Remove" button
-document.getElementById("remove").addEventListener("click", function () {
+// Function to toggle between two button modes
+function toggleButtonMode() {
+    const removeButton = document.getElementById("remove");
+
     if (removeMode) {
-        // In removal mode, remove selected rows and update balance
-        const selectedRows = document.querySelectorAll(".transactionList .selected");
-        for (const row of selectedRows) {
-            row.remove();
-        }
-        
-        // Update the displayed balance amount
-        const balanceAmount = document.getElementById("balanceAmount");
-        balanceAmount.textContent = `$${totalBalance.toFixed(2)}`;
-        
-        // Exit removal mode and reset the button
-        removeMode = false;
-        this.innerHTML = `
+        recalculateTotalBalance();
+        // Switch back to Add mode
+        removeButton.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                 <rect x="6.67188" y="12.231" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-45 6.67188 12.231)" fill="#C98989"/>
                 <rect x="12.4297" y="30.9438" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-135 12.4297 30.9438)" fill="#C98989"/>
             </svg>
             <p>Remove</p>
         `;
+        
     } else {
-        // Enter removal mode
-        removeMode = true;
-        this.innerHTML = `
+        // Switch to Delete mode
+        removeButton.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
                 <rect x="6.67188" y="12.231" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-45 6.67188 12.231)" fill="red"/>
                 <rect x="12.4297" y="30.9438" width="8.14276" height="26.464" rx="4.07138" transform="rotate(-135 12.4297 30.9438)" fill="red"/>
@@ -294,7 +303,13 @@ document.getElementById("remove").addEventListener("click", function () {
             <p>Delete</p>
         `;
     }
-});
+
+    // Toggle the mode
+    removeMode = !removeMode;
+}
+
+// Add a click event listener to the remove button
+document.getElementById("remove").addEventListener("click", toggleButtonMode);
 
 // Add a click event listener to the tables to toggle row selection
 const transactionLists = document.querySelectorAll(".transactionList");
@@ -303,6 +318,7 @@ for (const transactionList of transactionLists) {
 }
 
 function findSortedRowIndex(rows, date){
+
     let mid = Math.floor(rows.length / 2);
     let left = 0;
     let right = rows.length-1;

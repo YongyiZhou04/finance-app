@@ -12,6 +12,7 @@
     justify-content: center;
 } */
 
+
 /* Styling the Tables */
 .histHeaders{
     position: relative;
@@ -73,7 +74,8 @@
     color: #1C3738;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: -45px;
+    margin-top: 0px;
+    
 }
 
 td {
@@ -88,8 +90,6 @@ td {
 #histBalance{
     border-radius: 20px;
 }
-
-
 
 .cell1{
     width: 14%;
@@ -121,3 +121,4 @@ td {
     padding-right:10px;
     text-align: right;
 }
+
