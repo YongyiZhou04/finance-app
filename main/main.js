@@ -97,6 +97,12 @@ function addTransaction() {
         //Find the correct row index
         let index = findSortedRowIndex(transactionList.rows, date);
 
+        if (transactionList.rows.length != 0){
+            index += 1;
+        }
+
+        console.log("index: " + index);
+
         // Create a new row in the table
         const newRow = transactionList.insertRow(index);
 
@@ -269,6 +275,7 @@ function toggleRowSelection(event) {
     if (removeMode) {
         // In removal mode, remove the row
         row.remove();
+        updateChart(row.cells[0], 0, false);
     
         // Deselect the row after removal
         row.classList.remove("selected");
@@ -318,18 +325,29 @@ for (const transactionList of transactionLists) {
 }
 
 function findSortedRowIndex(rows, date){
-
     let mid = Math.floor(rows.length / 2);
     let left = 0;
     let right = rows.length-1;
-    while ((0 < mid && mid < rows.length) && !(rows[mid - 1].cells[0].innerText < date && date <= rows[mid].cells[0].innerText)) {
-        if (date > rows[mid].cells[0].innerText) {
+    while (left <= right) {
+        if (dateComparator(date, rows[mid].cells[0].innerText) == 0) {
+            return mid;
+        } else if (dateComparator(date, rows[mid].cells[0].innerText) == 1) {
             left = mid + 1;
         } else {
-            right = mid;
+            right = mid - 1;
         }
     
         mid = Math.floor((right + left) / 2);
     }
     return mid;
+}
+
+function dateComparator(date1, date2){
+    if ((date1.substr(6) + date1.substr(0,2) + date1.substr(3,5)) > (date2.substr(6) + date2.substr(0,2) + date2.substr(3,5))){
+        return 1;
+    } else if ((date1.substr(6) + date1.substr(0,2) + date1.substr(3,5)) < (date2.substr(6) + date2.substr(0,2) + date2.substr(3,5))){
+        return -1;
+    } else {
+        return 0;
+    }
 }
