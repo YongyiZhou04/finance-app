@@ -102,6 +102,7 @@ function addTransaction() {
         }
 
         const transactionList = document.getElementById(`transactionList${accountType}`);
+        const transactionListDouble = document.getElementById(`transactionList${transfer}`)
 
         //Find the correct row index
         let index = findSortedRowIndex(transactionList.rows, date);
@@ -207,8 +208,6 @@ function addTransaction() {
         //Add newEntry to local storage
         localStorage.setItem(newEntry.get("date"), newEntry)
 
-        // // Sort the table by date after adding a new transaction
-        // sortTableByDate();
     } else {
         alert("Please fill in all required fields with valid values. Required fields include Date, Description, Transfer, and either receive or spend.");
     }
