@@ -37,6 +37,14 @@ switchTab(accountType);
 const tabButtons = document.querySelectorAll(".tablinks");
 
 tabButtons.forEach(tabButton => {
+    tabButton.addEventListener("click", () => {
+        const newAccountType = tabButton.id.charAt(0).toUpperCase() + tabButton.id.slice(1);
+        if (accountType !== newAccountType) {
+            accountType = newAccountType;
+            switchTab(accountType);
+        }
+    });
+
     tabButton.addEventListener("mouseover", () => {
         if (tabButton.id !== accountType.toLowerCase()) {
             tabButton.style.backgroundColor = "#76a3a6";
@@ -45,10 +53,11 @@ tabButtons.forEach(tabButton => {
 
     tabButton.addEventListener("mouseout", () => {
         if (tabButton.id !== accountType.toLowerCase()) {
-            tabButton.style.backgroundColor = "#8EBBBD"; // Or reset it to another value if needed
+            tabButton.style.backgroundColor = "#8EBBBD";
         }
     });
 });
+
 
 function switchTab(accountType) {
     // Hide all tables
