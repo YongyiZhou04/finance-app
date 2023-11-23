@@ -1,9 +1,9 @@
-let balances = [];
 let dates = [];
+let balances = [];
 
 const lineData = {
-  labels: dates,
-  datasets: [{
+    labels : dates,
+    datasets: [{
         data: balances,
         fill: false,
         borderColor: '#1F6F73',
@@ -21,8 +21,6 @@ const lineConfig = {
                 time: {
                     unit: 'day'
                 },
-                min: dates.sort()[dates.length-1],
-                max: dates.sort()[0],
                 display: true,
                 grid: {
                     display: false,
@@ -97,12 +95,21 @@ const pieCanvas = document.getElementById('pieChart');
 // Create a new chart on the canvas
 const pieChart = new Chart(pieCanvas, pieConfig);
 
-function updateChart(date, balance){
+function updateChart(date, balance, add = true){
     let stringDate = date.toString();
-    dates.push(stringDate.substr(6,4).concat("-", stringDate.substr(0,2), "-", stringDate.substr(3,2)));
-    dates.sort();
-    console.log("min" + dates[dates.length-1].toString());
-    balances.push(balance);
+
+    stringDate = stringDate.substr(6,4).concat("-", stringDate.substr(0,2), "-", stringDate.substr(3,2));
+
+    if (add){
+        dates.push(stringDate);
+        dates.sort();
+        balances.splice(dates.indexOf(stringDate), 0, balance);
+    } else{
+        let index = dates.indexOf(stringDate);
+        dates.splice(index, 1);
+        balances.splice(index, 1);
+    }
+
 
     // Update the chart data
     lineChart.data.labels = dates.slice();
